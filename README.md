@@ -1,1 +1,1 @@
-# beadando
+# Akkerman Márton Kitalálós játék géppel
