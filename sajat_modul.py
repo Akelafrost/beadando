@@ -1,8 +1,8 @@
 import random
 class osztaly():
     name=''
-    tries=None
-    numbers=None
+    tries=''
+    numbers=''
 
     def __init__(self):
         self.name='Player'
@@ -25,16 +25,13 @@ class osztaly():
                     guessesLeft = str(guessesLeft)
                     print("Your guess is too high! You have " + guessesLeft + " guesses left")
 
-                if guess == number:
-                    break
-
             if guess == number:
                 numberofGuesses = str(numberofGuesses)
-                print("Good job "+self.name+"! You guessed the number in " + numberofGuesses + " tries :)")
+                return numberofGuesses
 
             if guess != number:
                 number = str(number)
-                print("Sorry. The number I was thinking of was " + number + " :)")
-
-gs=osztaly()
-gs.kitalalas()
+                return number
+if __name__=="__main__":
+    gs=osztaly()
+    print(gs.kitalalas())
