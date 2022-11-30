@@ -1,6 +1,19 @@
 from tkinter import *
 import sajat_modul
 
+def fajliras():
+    nev=str(p.name)
+    proba=str(p.tries)
+    szam=str(p.number)
+    megoldas=str(p.guessesLeft)
+    with open('fajl.txt', "w", encoding='utf-8') as fajl:
+        if p.guessesLeft != 0:
+            sor ='A'+nev+'nevű játékos'+proba+'probálkozásból'+megoldas+' próbálkozás alatt megfejtette a számot ami'+szam+'az'
+        else:
+            sor = 'A' + nev + 'nevű játékos nem sikerült kitalálnia'
+    fajl.write(sor)
+
+
 def kiiras():
 
     p.name = str(hossznev.get())
@@ -17,6 +30,10 @@ def kiiras():
     p.guess=int(talal.get())
     ok = Button(kitalalas, text='OK', command=p.kitalalas, width=3, height=1)
     ok.grid(row=2,column=2, sticky=E)
+    szamgenerator = Button(kitalalas, text='Generator', command=p.szam, width=30, height=1)
+    szamgenerator.grid(row=2, column=3, sticky=E)
+    fajlbairas=Button(kitalalas,text='iras',command=fajliras)
+    fajlbairas.grid(row=3, column=1)
     kitalalas.mainloop()
 p=sajat_modul.osztaly()
 
