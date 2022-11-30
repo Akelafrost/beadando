@@ -1,1 +1,2 @@
-# Akkerman Márton Kitalálós játék géppel,modulok:bemutatando,sajat_modul,tanult,Fuggvenyek:fajlkiiras,kiiras,kitalalas,szam
+# Akkerman Márton Kitalálós játék és fájlkiírása
+# modulok:bemutatando,sajat_modul,tanult,Fuggvenyek:fajlkiiras,kiiras,kitalalas,szam
