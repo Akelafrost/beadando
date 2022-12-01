@@ -16,6 +16,9 @@ def fajliras():
             sor ='A' + nev + 'nevű játékos nem sikerült kitalálnia'
     fajl.write(sor)
 
+def talalgat(talal):
+    p.guess = int(talal.get())
+    p.kitalalas()
 
 def kiiras():
     try:
@@ -30,17 +33,16 @@ def kiiras():
         kitalalas.title('Kitalálás')
         kitalalasszoveg=Label(kitalalas,text='Irj egy számot!')
         kitalalasszoveg.grid(row=0,column=0)
-        szam = IntVar(ablak,value=1)
-        talal = Entry(kitalalas,textvariable=szam, width=5)
+        talal = Entry(kitalalas, width=5)
         talal.grid(row=1, column=1, sticky=W)
-        p.guess=int(talal.get())
-        ok = Button(kitalalas, text='OK', command=p.kitalalas, width=3, height=1)
+        ok = Button(kitalalas, text='OK', command=talalgat, width=3, height=1)
         ok.grid(row=2,column=1, sticky=E)
         szamgenerator = Button(kitalalas, text='Generator', command=p.szam, width=30, height=1)
         szamgenerator.grid(row=2, column=2, sticky=E)
         fajlbairas=Button(kitalalas,text='iras',command=fajliras)
         fajlbairas.grid(row=3, column=1)
         kitalalas.mainloop()
+        return talal
 p=sajat_modul.osztaly()
 
 ablak = Tk()
