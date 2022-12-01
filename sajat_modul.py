@@ -32,7 +32,7 @@ class osztaly():
 
                 elif self.guess > number:
                     guessesLeft = str(self.guessesLeft)
-                    print("Probálkozott szám magas! Nekd " + guessesLeft + " probálkozásod van")
+                    print("Probálkozott szám magas! Neked " + guessesLeft + " probálkozásod van")
                     return self.guessesLeft
 
             if self.guess == number:
