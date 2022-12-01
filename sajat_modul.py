@@ -18,9 +18,10 @@ class osztaly():
         self.number = random.randint(0, self.numbers)
         return self.number
     def kitalalas(self):
-            number=self.number
+            number = self.number
             while self.numberofGuesses < self.tries:
-                 #self.guess = int(input("Válasz egy számot"))
+
+                #self.guess = int(input("Válasz egy számot"))
                 self.numberofGuesses=self.numberofGuesses+1
                 self.guessesLeft = self.tries - self.numberofGuesses
 
@@ -29,16 +30,15 @@ class osztaly():
                     print("Probálkozott szám alacsony! Neked " + guessesLeft + " probálkozásod van")
                     return self.guessesLeft
 
-
-                if self.guess > number:
+                elif self.guess > number:
                     guessesLeft = str(self.guessesLeft)
                     print("Probálkozott szám magas! Nekd " + guessesLeft + " probálkozásod van")
                     return self.guessesLeft
 
-                if self.guess == number:
-                    numberofGuesses = str(self.numberofGuesses)
-                    print('Kitaláltad '+numberofGuesses+' probálkozás alatt')
-                    return numberofGuesses
+            if self.guess == number:
+                numberofGuesses = str(self.numberofGuesses)
+                print('Kitaláltad '+numberofGuesses+' probálkozás alatt')
+                return numberofGuesses
 
             if self.guess != number:
                 number = str(number)
