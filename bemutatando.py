@@ -9,6 +9,7 @@ def fajliras():
     szam=str(p.number)
     megoldas=str(p.guessesLeft)
     with open('fajl.txt', "w", encoding='utf-8') as fajl:
+
         if p.guessesLeft != 0:
             sor ='A'+nev+'nevű játékos'+proba+'probálkozásból'+megoldas+' próbálkozás alatt megfejtette a számot ami'+szam+'az'
         else:

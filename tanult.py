@@ -1,4 +1,5 @@
 from tkinter import *
+import random
 class Tanultosztaly:
     szam=None
     talalat=None
